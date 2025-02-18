@@ -1,5 +1,5 @@
 # UV-Attack: Physical-World Adversarial Attacks for Person Detection via Dynamic-NeRF-based UV Mapping
-This is the repository for the paper BohoAttack: Physical-realizable, Free-pose and Transferable Evasion Attacks against Person Detectors
+This is the repository for the ICLR2025 paper UV-Attack: Physical-World Adversarial Attacks for Person Detection via Dynamic-NeRF-based UV Mapping
 ## 0. Overview
 ![Example GIF](./results/video/result.gif)
 The person is from [ZJU-MOCAP](https://github.com/zju3dv/neuralbody/blob/master/INSTALL.md#zju-mocap-dataset) dataset.
@@ -76,3 +76,15 @@ python src/diffusion_model_patch_generator_uv_volumes.py --mode video
 
 ## Acknowledge
 Our code is built based on [UV-Volumes](https://github.com/fanegg/UV-Volumes) and [Adv-CaT](https://github.com/WhoTHU/Adversarial_camou).
+
+## Cite this
+```
+@inproceedings{
+li2025uvattack,
+title={{UV}-Attack: Physical-World Adversarial Attacks for Person Detection via Dynamic-Ne{RF}-based {UV} Mapping},
+author={Yanjie Li and Kaisheng Liang and Bin Xiao},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=pqeWzZTrZY}
+}
+```
