@@ -1,0 +1,35 @@
+task: 'UVvolume_ZJU'
+gpus: [2]
+
+parent_cfg: 'configs/cmu_exp/p4s6.yaml'
+
+train_dataset:
+    data_root: '/home/yjli/AIGC/Adversarial_camou/zju_mocap/CoreView_387'
+    human: 'CoreView_387'
+    ann_file: '/home/yjli/AIGC/Adversarial_camou/zju_mocap/CoreView_387/annots.npy'
+    split: 'train'
+
+test_dataset:
+    data_root: '/home/yjli/AIGC/Adversarial_camou/zju_mocap/CoreView_387'
+    human: 'CoreView_387'
+    ann_file: '/home/yjli/AIGC/Adversarial_camou/zju_mocap/CoreView_387/annots.npy'
+    split: 'test'
+
+# data options
+H: 1024
+W: 1024
+ratio: 0.5
+training_view: [1,2,3,4,6,7,9,10,11]
+test_view: [5,8]
+num_train_frame: 100
+begin_ith_frame: 0
+frame_interval: 5
+vertices: 'new_vertices'
+params: 'new_params'
+densepose: 'densepose'
+mask: 'mask_cihp'
+ignore_boundary: True
+box_padding: 0.05
+nv: 6890
+pose_dim: 72
+exp_name: 'zju387'

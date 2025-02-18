@@ -1,0 +1,50 @@
+task: 'UVvolume_wild'
+gpus: [6]
+
+parent_cfg: '/home/yjli/AIGC/Adversarial_camou/UV_Volumes/configs/cmu_exp/p4s6.yaml'
+
+train_dataset:
+    data_root: '/home/yjli/AIGC/Adversarial_camou/my_dataset/Peter_chess'
+    human: 'wild_1'
+    # ann_file: '/home/yjli/AIGC/humannerf/dataset/zju_mocap/CoreView_377/annots.npy'
+    split: 'train'
+
+test_dataset:
+    data_root: '/home/yjli/AIGC/Adversarial_camou/my_dataset/Peter_chess'
+    human: 'wild_1'
+    # ann_file: '/home/yjli/AIGC/Adversarial_camou/my_dataset/Peter_chess/annots.npy'
+    split: 'test'
+
+# data options
+H: 1024
+W: 1024
+# resize to 320
+ratio: 0.3125 
+training_view: [0]
+test_view: [0]
+num_train_frame: 500
+begin_ith_frame: 10
+frame_interval: 1
+vertices: 'vertices'
+params: 'params'
+densepose: 'densepose'
+mask: 'masks'
+ignore_boundary: True
+box_padding: 0.05
+nv: 6890
+pose_dim: 72
+
+voxel_size: [0.005, 0.005, 0.005]  # dhw
+N_samples: 64
+
+use_vggLoss: True
+use_TL2Loss: True
+use_clothLoss: False
+use_clothLoss: False
+
+clothLoss_weight: 0.001
+vggLoss_weight: 5e-2
+TLoss_weight: 1e-1
+iLoss_weight: 1e-1
+uvLoss_weight: 1e-1
+exp_name: Peter_chess
