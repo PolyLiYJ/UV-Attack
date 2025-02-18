@@ -1,4 +1,4 @@
-# BohoAttack: Physical-realizable, Free-pose and Transferable Evasion Attacks against Person Detectors
+# UV-Attack: Physical-World Adversarial Attacks for Person Detection via Dynamic-NeRF-based UV Mapping
 This is the repository for the paper BohoAttack: Physical-realizable, Free-pose and Transferable Evasion Attacks against Person Detectors
 ## 0. Overview
 ![Example GIF](./results/video/result.gif)
